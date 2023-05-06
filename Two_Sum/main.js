@@ -1,10 +1,18 @@
-arr= [2,7,3,4]
-target = 9;
 
-for(let i=0; i< arr.length; i++){
-    for(let j = 1; j< arr.length; j++){
-        if(arr[i] + arr[j] == target){
-            console.log(i , j)
-        }
+
+let result = [];
+
+function two_sums(arr, target){
+    for(let i=0; i< arr.length; i++){
+        for(let j = 1; j< arr.length; j++){
+            debugger
+            if(arr[i] + arr[j] == target){
+                result.push(i);
+                result.push(j);
+                console.log(result)
+                return result; 
+            }
+        }   
     }
 }
+two_sums([2,5,5,11], 10);
